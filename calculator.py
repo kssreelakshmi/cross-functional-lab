@@ -18,8 +18,12 @@ def main():
     print("Operations: add, subtract, multiply, divide")
 
     op = input("Enter operation: ").strip().lower()
-    a = float(input("Enter first number: "))
-    b = float(input("Enter second number: "))
+    try:
+    	a = float(input("Enter first number: "))
+    	b = float(input("Enter second number: "))
+    except:
+    	printf("Error:Enter a valid number")
+	return
 
     result = calculator(op, a, b)
     print(f"Result: {result}")
